@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>关于思考 | Hyin | blog</title><meta name="author" content="Hyin"><meta name="copyright" content="Hyin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="偏向哲思的随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于思考">
+<meta property="og:url" content="http://example.com/posts/e6432aea/index.html">
+<meta property="og:site_name" content="Hyin | blog">
+<meta property="og:description" content="偏向哲思的随笔">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp">
+<meta property="article:published_time" content="2026-02-17T09:11:02.000Z">
+<meta property="article:modified_time" content="2026-02-17T09:15:43.440Z">
+<meta property="article:author" content="Hyin">
+<meta property="article:tag" content="形而上">
+<meta property="article:tag" content="抽象">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "关于思考",
+  "url": "http://example.com/posts/e6432aea/",
+  "image": "https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp",
+  "datePublished": "2026-02-17T09:11:02.000Z",
+  "dateModified": "2026-02-17T09:15:43.440Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Hyin",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/e6432aea/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于思考',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/font.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar/avatar_1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hyin | blog</span></a><a class="nav-page-title" href="/"><span class="site-name">关于思考</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">关于思考</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-02-17T09:11:02.000Z" title="发表于 2026-02-17 17:11:02">2026-02-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-17T09:15:43.440Z" title="更新于 2026-02-17 17:15:43">2026-02-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这是一个无效的密码 请检查并重试" data-whm="这些解密内容无法验证 但你仍然可以查看">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b7a8f1fed213db0c76ee593b8db16d9a56dbeb9e9f848da387a177e3366adffb">3953060be6b30f1d1e44393d084c20e0c3d365ef7d7def7e3abf8a21b638cf7a57301134ff1d859e3b7a05aeb8a3730993a0c7d81ea2ba873df5ec51c8cc8515f1c08a7e2aadac6d3329c79593423b0146b99e66eb1154b3052bdad067c79261192ac835462c5185ec719d139895d13a586ecef5ef10bc52f106a739d10674bc199645cf2ac10c67db80ae4eade388441804c6ccbcc3a9f384ae671970b1804a86b8612541cf766eb28fe278591770629ea78090fdb12e5f73abcc6a5d2d53b2dc007ec1962fcb0b3b8d139c2fb6c31d86e2f95928fa3aeebc9318a56268a084c410db6e344c54fe44f72bf50420c3501cfede7512c026ddcb8294f2113d34b3d8afedf38fae244c42644df0ce4e9b169bbfaf52884e41b86f875e94de50bd4fb0ecc962249ba6aa6fb77314848990e841e68e9f05deef2e7f25bf1deccc771ad23aabc987c9598417a54128f20e83182bedf2033b4ba50d1a9025d32a37429fbcfb2fbdb245d4536cd48310d4b48ec79acb1fc81fe07637dc3f06c443c84e204f898f867d2ac53972b67f52ab543e5387400f14b155889c2075719e94a4fdfb58b21ab5554e7faa6785679d7e889d4affa48335f9f431a6d1060343934f90e69558775e6e79abe90b70f712537612b9f375b8d98176f9602bccd35a6f684d2582016af6121681684a636f76e7b954a2ff1b149808bc2bca538bc7acb6038753a009669b2f5caba3872a822db089931622e733bcf6af21d5afe9a77aaf7c680ff2bd78f5ec1651a632c231d31c4701f38641e65b4d25c664daa73daffaaf4cab8389d25ea72340ffac56e0d4257daba83f3984316e7eba5154e504b65fff5a8e3c496f76e294b9540293e54ab446d9993e7f92d24b1713e9d18d8cb812342eee453cda2fc9b74f87fd35e9771be7239130116f38548e826b4a3413dcc63610fbe0257795470cf4775778efab2c53227a7c5df4af729342ff54cea59569dbcc2ad683d8ddb86e7750c7f82db0c7129015c71acf27274d4e066287f3c60c0220a3d7655d7285b860fae7ae78f059946d74e876a6fdf7b02083d0f504d1a4bc89bfee565f9b1d3312774bdcb89aeec3dcbbbd63cb52101a102a444aa5c1c3f04696f946e7e5e5e24419f4ef3fe7c290500a9698d0477c4a2e899a457700db7bfbc55d52e234585d1b7e693a472da76aeb597381508fa0556b6f9905df331d0de73ab47eb21d8a8dfe4c57f3ead1c4ca6c69479e037ab482c6e4cb0fa2ce5eb2ae5c88c6529e6ffcbddef31a79b548030b2c845b46935ed35fbfaeab92ca6dd7db2efd6e3bd00d6fd9e38714eb99e81eaea340d8e090690764aba6f4b145597577f37bee7bf2ff0b4f135ba01ae791d2bca7fa2d8282f6a02b1605905a5e34b3f207c6e29e09b28605aa0386bbe5d00b75fb893dc03881aee06a48e317d40eb5cfc58d8c44595fb38b156ee5c274be428121ba2526092b7648abb6892cb9aab76b4b14226306761d3b6b2cb9b1d139ff1fed85ee7903e2d1bd7bb279125d18e51257194e052acaa47c20a13e1589b95b7dd45bd93dfdd770b9ab8510cfbcd9e093a60583a2dfc9f3cc46ab24d5b3378b44bd672e9c3807e6e439f35d0a41f82240d4cd9bb0778854157e2537a78043c82b03c79aef1d89c88156e9e78d37ea0bee06d7df1d5e9cde824afce73f7d5d992877ba781dd1d1cf787203785ec62fdcbd6ebf395659819aecee14316fe7fc34900a11c3b37642020ff4033baf367e3466f3a25fa7cceb73a999e618d3c5b6bfc8ebef8471dd88cbe22defb9bc6c7c1d81de80c40436c094a69aebbf52de80b86720e64e10dca241134ed0ced8a72a3d99c7882293f2a4e6358c6ef722b2bea9b7032d50f62be0faa5009dbb9c97a64d3a197a2fb32e255dafd984c24cea3792722d236dbf8cb0443b4ea2f019a43a108b839e9dd8e32062d201fe06d06eb08ace00df82e82d6f800514bc5cfd29fbc757a9de9674923b5e605a9185574905e0c0aa6a770e8f5493691b5dab5db7ddd97b62012fb2ccd7008c53be732893d134b015694e0b0e08d44034030e4550c0ab89ca8338f42597f6d3dcc183f0a001a11bc6fe5d7c628e77e87d456f4cf5d0a271f9bd625ed4a844e8ce67bb9a5b10b39e10bca3121de69a10a07bcc2c4dd861646cb1c11c99873a05f915b36a4aec86a06264911cbc5ec8d9e48b9c6c1a55c64c3360c37868ec3c9b0b3664a0423a0030ed8ff268eaf3e7c472468beb31cd0f8aa1d6ddd08eba61afd04d1c8aae8a4de8c17f69a2a1801ba365dd350fe40299b398dad18bfd4f314fa8d2b11613fb962763d910538a9eaec1a61e1346d691739eac6c1b8eb70e31bc31e8729d95757be5c191a37f621015783956ed2449fb11516267409b10a3a77396c09656c248780d75520802e20babfdedf778a0a6e6dbfdd20601e6159c04075d2e138182abfa0b03717185f8d71577cff364cb78d6e8ae273fea3adc9bf860337c2383dc80a47d3146c7e488b2a5e1c72fb170834d87f27f52bb1cc97673ea22d4f185596ca65d45530901d9bbf13296f879adaa57052568c0e3fec224c49ec28766d8a1a560d3db5f5a17281d7d8efd8bdac8f93a82fb8bd38e0bbadc29818df9f25d94a8590e1e54f8bd7a730457f425f5c6615d346e8c05fcb26dcd3d60db69bc9359c8e2256e90805036bca21c8d887e9ffaef0ce61e80505be3722d1c99eb7c7e674bdf7cb2e9b3726829207199d95b89774e7822c82666d4479734cbec4d44b1503d7f1a03a63e2b9cc961a6b4d3c451f88e0eaecc5facd9cbec8e45f7924aaf939b730f6a8b96912ccecec3299d60f66de3ab6b13ce7f69dc472caadd1f90acd50cb8a705e6b1d80fc9f7e80aaee488bc991c35654a27612777b89b59cc971013b02636d160486f878451fa47d403785a3149701c5fa0034b224772f3a3c685656379f56f8b94cf51101ac91dd3f3c6f00c30bb7bb07b61e7c8d0c504817aa3e336f21a434bfc5e3d3ba54f73aa7b3ea5d3211fc3750806a7b76eb42d42ae34409aa89d1ec5d2294aab4fd93103923dec5f3340c53e04692ed94d61529b73f2e49ecf8a5222eb430a256a242e46ed8d7dd789ceb641e2da4b49ab0a077cd10fdf4068866b57d8ce32e6104621442e812c683b7266c356dd9c17d849ee3f3d396d308b5263410727b605ed3fa19197eb88178093f01b2dbf79daa52da219675f9d1cc0ad992ce6fbfac573e8d7b55a00c8f064dee5785186d688388ac00e5a0e2d73d3b3d5f032edd9c3f50d61050579347ccb351065d84a523ed9325cb77c3c5c32dfc16d6593d80708422b921b38d123259f7a2e991e9553b5b4275621315a98f9ec8407b31e65a7b7952ebb5aa178e0a705662f9e55d5c24106b59e194178ff7ea9cbfa0eb6fd5d74322506da5678d4f55f574254fd47a14ca2970ced6eae61f617b83ea1541e076bb928abe2856f5194bb896218e1384ee56b278e4cccb7e652fb8f0a957671afe571af7337fd3df3d224e9e89ccb7c2dcfa854812af711b30ff11c5edba0ff062011475f1b82843a37f96e47ef6f80f36d9c613ac09c1e55761413c1cf0b77edd936bae11b887ea306a345d450cd80fb0c7d4506823a70d9b8eaa4050ab9729018e919a40d93e953335066fb99f218891fdac1f1093c74111a01655b77f9a9a8716a1ad482b46716fbd14f8e7b0e98c3e2e3acd1ed18fc5b8b9fd1c3a00552c1820eda32ab7f5890cff094cf8d7e38f7901ede9fd2c2287446d862b0a88e7f55a1686a43c8761626feb8294a810be6c760e0ee1ee032811243a0d6389a363fb38e25f955275b7eda6ce20460eda840e3999466a3a93f7d0a96173a66283d810a9b09c0207885113551b35cc2ae3c4c66c7df5a18cb70f6e4f64e352f6e36cac5f9a6aa778bf7990cfdc945a53747322e60a221fee078ad112d22f4f0c083da89756ba63ca0ed1eb56e42930d5505ea09649b6d6d7280ed19935df149f495ae3ff0d7081c0ae5dfce60cbab24</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码才能访问</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax="" src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Hyin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/e6432aea/">http://example.com/posts/e6432aea/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Hyin | blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a><a class="post-meta__tags" href="/tags/%E6%8A%BD%E8%B1%A1/">抽象</a><a class="post-meta__tags" href="/tags/%E5%BD%A2%E8%80%8C%E4%B8%8A/">形而上</a></div><div class="post-share"><div class="social-share" data-image="https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/d1874913/" title="常用软件备份"><img class="cover" src="https://free.picui.cn/free/2026/02/13/698ef7826beae.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">常用软件备份</div></div><div class="info-2"><div class="info-item-1">Android 常用软件备份记录一些自己日常使用的 Android 软件，方便重装或换机时快速找回。 🎵 音频类Salt Player本地音乐播放器，设计简洁，解码表现不错。🔗 下载链接 音乐标签给音乐文件添加歌词、封面等元数据的工具，适合整理本地曲库。🔗 下载链接 小宇宙中文播客应用，界面舒服，内容生态也不错。🔗 下载链接 🛠️ 工具类XMind老牌思维导图工具，用来梳理思路、做笔记都很顺手。🔗 下载链接 TermuxAndroid 上的 Linux 终端模拟器，能装各种命令行工具，可玩性极高。🔗 下载链接 Seal开源的视频下载工具，支持 YouTube、B站等多个平台。🔗 下载链接 PicHoro手机端图床管理工具，兼容多种图床服务，方便上传和管理图片。🔗 下载链接 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/d1874913/" title="常用软件备份"><img class="cover" src="https://free.picui.cn/free/2026/02/13/698ef7826beae.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-17</div><div class="info-item-2">常用软件备份</div></div><div class="info-2"><div class="info-item-1">Android 常用软件备份记录一些自己日常使用的 Android 软件，方便重装或换机时快速找回。 🎵 音频类Salt Player本地音乐播放器，设计简洁，解码表现不错。🔗 下载链接 音乐标签给音乐文件添加歌词、封面等元数据的工具，适合整理本地曲库。🔗 下载链接 小宇宙中文播客应用，界面舒服，内容生态也不错。🔗 下载链接 🛠️ 工具类XMind老牌思维导图工具，用来梳理思路、做笔记都很顺手。🔗 下载链接 TermuxAndroid 上的 Linux 终端模拟器，能装各种命令行工具，可玩性极高。🔗 下载链接 Seal开源的视频下载工具，支持 YouTube、B站等多个平台。🔗 下载链接 PicHoro手机端图床管理工具，兼容多种图床服务，方便上传和管理图片。🔗 下载链接 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar/avatar_1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info-name">Hyin</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content toc-div-class" style="display:none"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E2%80%9C%E6%80%9D%E8%80%83%E2%80%9D"><span class="toc-number">1.</span> <span class="toc-text">关于“思考”</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%80%9D%E8%80%83%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">什么是思考？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%BA%9B%E6%98%AF%E9%87%8D%E8%A6%81%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">哪些是重要的思考？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83%E4%B9%8B%E8%B7%AF"><span class="toc-number">1.3.</span> <span class="toc-text">我的思考之路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E5%8F%82%E8%80%83%E6%80%A7%E7%9A%84%E7%AD%94%E6%A1%88"><span class="toc-number">1.4.</span> <span class="toc-text">一个参考性的答案</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/e6432aea/" title="关于思考"><img src="https://img.cdn1.vip/i/6990082b7fbb8_1771046955.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于思考"></a><div class="content"><a class="title" href="/posts/e6432aea/" title="关于思考">关于思考</a><time datetime="2026-02-17T09:11:02.000Z" title="发表于 2026-02-17 17:11:02">2026-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d1874913/" title="常用软件备份"><img src="https://free.picui.cn/free/2026/02/13/698ef7826beae.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用软件备份"></a><div class="content"><a class="title" href="/posts/d1874913/" title="常用软件备份">常用软件备份</a><time datetime="2026-02-17T06:02:39.000Z" title="发表于 2026-02-17 14:02:39">2026-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ec03d83/" title="在Cloudflare上部署邮件服务"><img src="https://free.picui.cn/free/2026/02/13/698ef7816a949.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在Cloudflare上部署邮件服务"></a><div class="content"><a class="title" href="/posts/ec03d83/" title="在Cloudflare上部署邮件服务">在Cloudflare上部署邮件服务</a><time datetime="2026-02-17T06:02:22.000Z" title="发表于 2026-02-17 14:02:22">2026-02-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">©&nbsp;2025 - 2026 By Hyin</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"></div><hr><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
