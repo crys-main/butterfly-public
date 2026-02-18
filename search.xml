@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Sink: 轻量化链接缩短器</title>
+      <link href="/posts/f82c473/"/>
+      <url>/posts/f82c473/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Sink：一款可部署在Cloudflare上的轻量级链接缩短器"><a href="#Sink：一款可部署在Cloudflare上的轻量级链接缩短器" class="headerlink" title="Sink：一款可部署在Cloudflare上的轻量级链接缩短器"></a>Sink：一款可部署在Cloudflare上的轻量级链接缩短器</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Sink 是一个简洁、快速且功能强大的链接缩短器。它的特别之处在于，可以免费部署在 Cloudflare 的 Workers 和 Pages 上，自带美观的管理面板和基础的分析功能，让你完全掌控自己的数据。</p><blockquote><p><strong>注：</strong> 虽然本文主要使用 Cloudflare 进行部署教程，但 Sink 也支持通过其他方式部署，感兴趣可以前往其官方页面查看。</p></blockquote><ul><li><strong>项目官方页面</strong>: <a href="https://github.com/miantiao-me/Sink">https://github.com/miantiao-me/Sink</a></li></ul><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在开始之前，你需要准备以下东西：</p><ol><li><strong>一个 Cloudflare 账号</strong>（如果使用 Cloudflare 部署，此为必须）</li><li><strong>一个 GitHub 账号</strong>（用于 Fork 项目代码）</li><li><strong>一个域名</strong>（可选，但强烈推荐，用于绑定你的短链接服务）</li></ol><blockquote><p><strong>提示：</strong> 本教程使用了手机浏览器页面进行截图提示，但所有操作步骤和界面逻辑与电脑端完全一致，请放心跟随操作</p></blockquote><hr><h3 id="详细部署步骤"><a href="#详细部署步骤" class="headerlink" title="详细部署步骤"></a>详细部署步骤</h3><h4 id="第一步：Fork-项目"><a href="#第一步：Fork-项目" class="headerlink" title="第一步：Fork 项目"></a>第一步：Fork 项目</h4><ol><li>首先，打开上面提供的 Sink 项目 GitHub 链接。</li><li>如果你觉得项目不错，可以给作者点个 ⭐Star 以示支持。</li><li>点击右上角的 <strong>Fork</strong> 按钮，将项目代码复制到自己的 GitHub 仓库中。<br><img src="https://img.cdn1.vip/i/699549f10f8dd_1771391473.webp" alt="配图"></li></ol><h4 id="第二步：在-Cloudflare-Pages-上创建项目"><a href="#第二步：在-Cloudflare-Pages-上创建项目" class="headerlink" title="第二步：在 Cloudflare Pages 上创建项目"></a>第二步：在 Cloudflare Pages 上创建项目</h4><ol><li>登录你的 Cloudflare 账号，在左侧菜单栏找到并进入 <strong>Workers 和 Pages</strong>。</li><li>点击 <strong>创建应用程序</strong> 按钮。如果你是第一次使用，需要先 <strong>连接到 GitHub</strong>，授权 Cloudflare 访问你的仓库。</li><li>成功连接 GitHub 后，再次点击右上角的 <strong>创建应用程序</strong> 按钮。这一次，在页面最底部找到一行小字：<strong>“想要部署 Pages？开始使用”</strong>，点击它<br><img src="https://img.cdn1.vip/i/699549f530269_1771391477.webp" alt="配图"></li><li>选择 <strong>从 Git 仓库导入</strong>，在列表中找到并选择你刚刚 Fork 的 <code>Sink</code> 仓库，然后点击 <strong>开始设置</strong>。</li></ol><h4 id="第三步：配置构建与环境变量"><a href="#第三步：配置构建与环境变量" class="headerlink" title="第三步：配置构建与环境变量"></a>第三步：配置构建与环境变量</h4><ol><li>在“设置构建和部署”部分，<strong>框架预设</strong> 请选择 <strong>Nuxt.js</strong>。其他选项保持默认即可。</li><li>在页面下方，找到 <strong>环境变量</strong> 部分。这里我们需要添加一系列配置。</li></ol><h5 id="核心环境变量（必须填写）"><a href="#核心环境变量（必须填写）" class="headerlink" title="核心环境变量（必须填写）"></a>核心环境变量（必须填写）</h5><p>以下三个变量是必须配置的，请仔细按照说明获取：</p><ul><li><strong><code>NUXT_SITE_TOKEN</code></strong>：登录管理面板的密码，请务必设置一个复杂的、只有你知道的字符串。</li><li><strong><code>NUXT_CF_ACCOUNT_ID</code></strong>：你的 Cloudflare 账户 ID。<ul><li><em>获取方法</em>：随便选择一个你的域名进入仪表盘，右侧边栏下方可以看到“帐户 ID”；或者在 Workers 和 Pages 页面拉到最下方也能看到。</li></ul></li><li><strong><code>NUXT_CF_API_TOKEN</code></strong>：Cloudflare API 令牌，用于让 Sink 访问你的分析数据<ul><li><em>获取方法</em>：点击右上角头像 -&gt; [配置文件] -&gt; [API 令牌] -&gt; [创建令牌]。找到“读取分析数据和日志”模板，点击“使用模板”</li><li><strong>重点：</strong> 删除其他所有权限，只保留 <strong>“帐户分析”</strong> 的读取权限。最后在页面底部点击 <strong>“继续以显示摘要”</strong> -&gt; <strong>“创建令牌”</strong></li><li><strong>请务必保存好这个 Token，因为它只会显示一次！</strong></li></ul></li></ul><h5 id="其他环境变量（可选配置）"><a href="#其他环境变量（可选配置）" class="headerlink" title="其他环境变量（可选配置）"></a>其他环境变量（可选配置）</h5><p>以下变量如无特殊需要，无需配置。你也可以根据需要自行调整。</p><table><thead><tr><th align="left">变量名</th><th align="left">默认值&#x2F;示例</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left"><code>NUXT_PUBLIC_PREVIEW_MODE</code></td><td align="left"><code>true</code></td><td align="left">是否开启预览模式</td></tr><tr><td align="left"><code>NUXT_PUBLIC_SLUG_DEFAULT_LENGTH</code></td><td align="left"><code>5</code></td><td align="left">生成的短链接路径长度</td></tr><tr><td align="left"><code>NUXT_REDIRECT_STATUS_CODE</code></td><td align="left"><code>308</code></td><td align="left">重定向状态码</td></tr><tr><td align="left"><code>NUXT_LINK_CACHE_TTL</code></td><td align="left"><code>60</code></td><td align="left">链接缓存时间（秒）</td></tr><tr><td align="left"><code>NUXT_REDIRECT_WITH_QUERY</code></td><td align="left"><code>false</code></td><td align="left">重定向时是否携带原始查询参数</td></tr><tr><td align="left"><code>NUXT_HOME_URL</code></td><td align="left"><code>https://sink.cool</code></td><td align="left">你的首页地址（绑定域名后记得修改）</td></tr><tr><td align="left"><code>NUXT_DATASET</code></td><td align="left"><code>sink</code></td><td align="left">数据集名称</td></tr><tr><td align="left"><code>NUXT_AI_MODEL</code></td><td align="left"><code>@cf/meta/llama-3-8b-instruct</code></td><td align="left">（可选）用于 AI 功能的模型</td></tr><tr><td align="left"><code>NUXT_AI_PROMPT</code></td><td align="left"><code>&quot;You are a URL shortening assistant......&quot;</code></td><td align="left">（可选）AI 的提示词</td></tr></tbody></table><ol start="3"><li>将上述变量填写完成后，点击 <strong>保存并部署</strong> 按钮。Cloudflare 将开始自动构建和部署你的应用，第一次部署很快就会完成。</li></ol><h4 id="第四步：创建并绑定-KV-存储与-Analytics-Engine"><a href="#第四步：创建并绑定-KV-存储与-Analytics-Engine" class="headerlink" title="第四步：创建并绑定 KV 存储与 Analytics Engine"></a>第四步：创建并绑定 KV 存储与 Analytics Engine</h4><p>部署完成后，点击 <strong>继续处理项目</strong>，进入项目控制台。</p><ol><li><p><strong>创建 KV 命名空间</strong>：</p><ul><li>在左侧菜单找到 <strong>存储和数据库</strong> -&gt; <strong>KV</strong></li><li>点击 <strong>创建命名空间</strong>，名称可以随意，例如 <code>SINK_KV</code>，然后点击 <strong>添加</strong></li></ul></li><li><p><strong>启用 Analytics Engine</strong>：</p><ul><li>还是在 <strong>存储和数据库</strong> 下，找到 <strong>Analytics Engine</strong>，并点击 <strong>启用</strong> 这一步通常只需点击一次即可激活。</li></ul></li><li><p><strong>绑定资源到项目</strong>：</p><ul><li>返回你的 Sink 项目页面，点击上方的 <strong>设置</strong> 选项卡</li><li>在左侧菜单中选择 <strong>绑定</strong></li><li><strong>绑定 KV 命名空间</strong>：点击 <strong>添加绑定</strong>，选择 <strong>KV 命名空间</strong>。<strong>变量名称</strong> 必须设置为大写的 <strong><code>KV</code></strong>，在下拉框中选择你刚刚创建的 KV 命名空间（如 <code>SINK_KV</code>），然后点击 <strong>保存</strong></li><li><strong>绑定 Analytics Engine</strong>：再次点击 <strong>添加绑定</strong>，选择 <strong>Analytics Engine</strong>。<strong>变量名称</strong> 设置为 <strong><code>ANALYTICS</code></strong>，数据集填写 <strong><code>sink</code></strong>，然后点击 <strong>保存</strong></li></ul></li><li><p><strong>添加兼容性标志</strong>：</p><ul><li>仍在 <strong>设置</strong> 页面，找到左侧菜单的 <strong>运行时</strong>。</li><li>在 <strong>兼容性标志</strong> 区域，找到 <strong>生产兼容性标志</strong>，点击 <strong>添加标志</strong>，输入 <strong><code>nodejs_compat</code></strong>，然后点击 <strong>保存</strong>。</li></ul></li></ol><h4 id="第五步：最终部署与自定义域名"><a href="#第五步：最终部署与自定义域名" class="headerlink" title="第五步：最终部署与自定义域名"></a>第五步：最终部署与自定义域名</h4><ol><li>所有配置都完成后，我们需要让这些设置生效。回到项目的 <strong>部署</strong> 选项卡。</li><li>你会看到最近一次的部署记录。点击右侧的三个点（…）菜单，选择 <strong>重试部署</strong>。</li><li>等待这次部署完成。</li><li>部署成功后，你就可以为你的短链接服务绑定一个自定义域名了（强烈推荐！） 点击 <strong>自定义域</strong> 区域，按照提示添加你的域名即可</li></ol><h3 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h3><p>至此，所有设置均已大功告成！现在，你可以通过 Cloudflare 为你生成的 <code>.pages.dev</code> 临时域名，或者你绑定的自定义域名来访问你的 Sink 服务了。</p><p>在登录页面输入你之前设置的 <code>NUXT_SITE_TOKEN</code>，即可进入管理面板，开始创建你的第一个短链接，并查看点击数据啦！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+          <category> Cloudflare </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cloudflare </tag>
+            
+            <tag> 开源项目 </tag>
+            
+            <tag> 链接 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于思考</title>
       <link href="/posts/e6432aea/"/>
       <url>/posts/e6432aea/</url>
@@ -83,6 +114,8 @@
             <tag> Cloudflare </tag>
             
             <tag> Mail </tag>
+            
+            <tag> 开源项目 </tag>
             
         </tags>
       
