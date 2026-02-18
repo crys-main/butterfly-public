@@ -1,5 +1,11 @@
 @font-face {
-  font-family: 'Maple';
+  font-family: 'Maok';
   font-display: swap;
-  src: url('/fonts/MapleMonoNF.woff2') format("woff2");  
+  src: url('/fonts/MaoK.woff2') format("woff2");  
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  font-display: swap;
+  src: url('/fonts/JetBrains.woff2') format("woff2");  
 }
